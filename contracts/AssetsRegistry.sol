@@ -27,6 +27,8 @@ contract AssetsRegistry is Ownable {
     }
 
     function getReserveAddresses() external view returns(bytes32[] memory reserveAddresses) {
+        reserveAddresses = new bytes32[](tickersList.length);
+
         for (uint i = 0; i < tickersList.length; i++) {
             reserveAddresses[i] = assets[tickersList[i]];
         }

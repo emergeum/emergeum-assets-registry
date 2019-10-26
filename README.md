@@ -1,0 +1,1 @@
+# emeregeum-assets-registry

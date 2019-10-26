@@ -1,1 +1,1 @@
-# emeregeum-assets-registry
+# emergeum-assets-registry

@@ -80,7 +80,7 @@ contract AssetsRegistry is Ownable {
         tickersList.length--;
     }
 
-    function hasTicker(bytes32 ticker) internal view returns (bool) {
+    function hasTicker(bytes32 ticker) public view returns (bool) {
         return !isEmpty(assets[ticker]);
     }
 

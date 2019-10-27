@@ -60,8 +60,8 @@ contract AssetsRegistry is Ownable {
         require(!isEmpty(ticker), "Ticker can't be empty");
         require(hasTicker(ticker), "Ticker doesn't exist");
 
-        delete assets[ticker];
         removeFromArray(ticker);
+        delete assets[ticker];
     }
 
     function resetAssets() external onlyOwner {

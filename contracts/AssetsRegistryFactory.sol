@@ -1,4 +1,5 @@
 pragma solidity >=0.4.21 <0.6.0;
+pragma experimental ABIEncoderV2;
 
 import "./AssetsRegistry.sol";
 
@@ -9,7 +10,7 @@ contract AssetsRegistryFactory {
 
     function newRegistry(
         bytes32[] memory tickers,
-        bytes32[] memory reserveAddresses
+        string[] memory reserveAddresses
     ) public returns (AssetsRegistry) {
         AssetsRegistry registry = new AssetsRegistry(tickers, reserveAddresses);
 
